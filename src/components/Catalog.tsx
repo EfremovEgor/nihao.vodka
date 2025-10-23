@@ -80,7 +80,7 @@ const Catalog = () => {
 		setIsDragging(false);
 		setIsTransitionEnabled(true);
 
-		const swipeThreshold = 50; // Уменьшаем порог для более отзывчивого свайпа
+		const swipeThreshold = 50;
 		const velocityThreshold = 0.5;
 
 		const swipeVelocity = Math.abs(currentTranslate) / 150;
@@ -101,7 +101,7 @@ const Catalog = () => {
 	};
 
 	const getSliderStyle = () => {
-		const baseTranslate = -currentIndex * 100; // Базовое положение текущего элемента
+		const baseTranslate = -currentIndex * 100;
 		const totalTranslate =
 			baseTranslate + (currentTranslate / window.innerWidth) * 100;
 
@@ -136,7 +136,6 @@ const Catalog = () => {
 		return () => window.removeEventListener("keydown", handleKeyDown);
 	}, [currentIndex]);
 
-	// В вашем JSX добавьте стили для контейнера:
 	return (
 		<div
 			id="catalog"
