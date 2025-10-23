@@ -56,7 +56,7 @@ const Catalog = () => {
 
 		setIsDragging(false);
 
-		const swipeThreshold = 70;
+		const swipeThreshold = 100;
 
 		if (currentTranslate < -swipeThreshold) {
 			nextItem();
@@ -202,13 +202,21 @@ const Catalog = () => {
 							СВЯЗАТЬСЯ
 						</Button>
 					</div>
-					<div className="flex justify-center items-center">
+					<div className="relative h-fit mx-auto w-fit mt-[300px] lg:mt-[100px]">
 						<img
 							src={items[currentItem].image}
-							className="z-[2] w-[100px] xl:w-auto"
+							className="z-[2] h-fit w-[70px] lg:w-auto"
 							draggable="false"
 							alt={items[currentItem].name}
 						/>
+						{items[currentItem].awarded && (
+							<img
+								className="h-12 w-12 lg:h-24 lg:w-24 absolute z-2 -right-6 -bottom-6 lg:-bottom-10 lg:-right-14"
+								src="/images/items/award.png"
+							/>
+						)}
+						{items[currentItem].mainIngredient &&
+							items[currentItem].mainIngredient}
 					</div>
 				</div>
 				<div className="transform flex space-x-3 z-10 items-center justify-center my-16 lg:my-0">

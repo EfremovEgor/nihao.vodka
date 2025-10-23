@@ -5,6 +5,7 @@ export interface Item {
 	strength: number;
 	awarded?: boolean;
 	image: string;
+	mainIngredient?: React.ReactElement;
 	theme: React.CSSProperties;
 	coctail: Coctail;
 	darkText?: boolean;
@@ -29,6 +30,17 @@ export const items: {
 		volume: "0,5 / 0,7",
 		strength: 40,
 		awarded: true,
+		mainIngredient: (
+			<div className="w-fit absolute z-2 -bottom-12 lg:bottom-0 -left-14 lg:-left-32">
+				<img
+					className="h-[100px] lg:h-[200px] w-fit mx-auto"
+					src="/images/items/ingredients/wheat.png"
+				/>
+				<h2 className="uppercase text-white font-extralight text-sm lg:text-base">
+					Зерновой спирт
+				</h2>
+			</div>
+		),
 		image: "/images/items/classic.png",
 		theme: {
 			"--first-gradient-color": "#B24C35",
@@ -64,6 +76,17 @@ export const items: {
 		strength: 40,
 		awarded: true,
 		darkText: true,
+		mainIngredient: (
+			<div className="w-fit absolute z-2 -bottom-12 lg:bottom-0 -left-14 lg:-left-32">
+				<img
+					className="h-[60px] lg:h-[120px] w-fit mx-auto"
+					src="/images/items/ingredients/rice.png"
+				/>
+				<h2 className="uppercase text-white font-extralight text-sm lg:text-base text-center">
+					Настой риса
+				</h2>
+			</div>
+		),
 		image: "/images/items/ganbei.png",
 		theme: {
 			"--first-gradient-color": "#aaa22d",
@@ -96,6 +119,17 @@ export const items: {
 		description: `Водка особая создана для ценителей изысканных напитков, любителей китайской культуры и эстетики. Уникальный вкус подчеркивается добавлением ароматного настоя мандарина и особенно ценится профессионалами в сфере гостеприимства, стремящимися предложить своим гостям исключительные напитки.`,
 		volume: "0,5 / 0,7",
 		strength: 38,
+		mainIngredient: (
+			<div className="w-fit absolute z-2 -bottom-12 lg:bottom-0 -left-14 lg:-left-32">
+				<img
+					className="h-[60px] lg:h-[140px] w-fit mx-auto"
+					src="/images/items/ingredients/tangerine.png"
+				/>
+				<h2 className="uppercase text-white font-extralight text-sm lg:text-base text-center">
+					Настой <br /> мандарина
+				</h2>
+			</div>
+		),
 		image: "/images/items/tangerine.png",
 		theme: {
 			"--first-gradient-color": "#DE6126",
@@ -137,6 +171,17 @@ export const items: {
 			"--third-gradient-color": "#000000",
 			"--current-color": "#508042",
 		} as React.CSSProperties,
+		mainIngredient: (
+			<div className="w-fit absolute z-2 -bottom-12 lg:bottom-0 -left-14 lg:-left-32">
+				<img
+					className="h-[70px] lg:h-[140px] w-fit mx-auto"
+					src="/images/items/ingredients/plum.png"
+				/>
+				<h2 className="uppercase text-white font-extralight text-sm lg:text-base text-center">
+					Мякоть сливы
+				</h2>
+			</div>
+		),
 		coctail: {
 			name: "Yuzu Plum Sour",
 			slogan: "Восточно-фруктовый",
@@ -165,6 +210,17 @@ export const items: {
 		strength: 38,
 		darkText: true,
 		image: "/images/items/lotos.png",
+		mainIngredient: (
+			<div className="w-fit absolute z-2 -bottom-12 lg:bottom-0 -left-14 lg:-left-32">
+				<img
+					className="h-[70px] lg:h-[140px] w-fit mx-auto"
+					src="/images/items/ingredients/lotos.png"
+				/>
+				<h2 className="uppercase text-white font-extralight text-sm lg:text-base text-center">
+					настой цветка <br /> лотоса
+				</h2>
+			</div>
+		),
 		theme: {
 			"--first-gradient-color": "#406379",
 			"--second-gradient-color": "#19262f",
