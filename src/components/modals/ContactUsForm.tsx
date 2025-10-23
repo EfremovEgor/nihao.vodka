@@ -15,39 +15,45 @@ const ContactUsForm = ({
 			>
 				<div
 					onClick={(e) => e.stopPropagation()}
-					className="bg-red w-full max-w-[660px] min-h-10 p-16 rounded-4xl"
+					className="bg-red w-full max-w-[660px] min-h-10 p-4 lg:p-16 rounded-4xl"
 				>
-					<h1 className="uppercase text-3xl text-center text-white">
+					<h1 className="uppercase text-xl lg:text-3xl text-center text-white">
 						Хотите связаться с нами?
 					</h1>
 
-					<form action="" className="mt-8 flex flex-col gap-4">
+					<form
+						action=""
+						className="mt-4 lg:mt-8 flex flex-col gap-4"
+					>
 						<input
 							type="text"
 							name="theme"
 							placeholder="ТЕМА ОБРАЩЕНИЯ"
-							className="placeholder-black bg-white px-4 py-4 w-full text-xl"
+							className="placeholder-black bg-white px-2 py-2 lg:px-4 lg:py-4 w-full  lg:text-xl"
 						/>
 
 						<input
 							type="text"
 							name="full_name"
 							placeholder="ФИО"
-							className="placeholder-white border-yellow border-2 px-4 py-4 w-full text-xl"
+							className="placeholder-white border-yellow border-2 px-2 py-2 lg:px-4 lg:py-4 w-full lg:text-xl"
 						/>
 						<input
 							type="tel"
 							name="phone"
 							placeholder="ТЕЛЕФОН"
-							className="placeholder-white border-yellow border-2 px-4 py-4 w-full text-xl"
+							className="placeholder-white border-yellow border-2 px-2 py-2 lg:px-4 lg:py-4 w-full lg:text-xl"
 						/>
 						<input
 							type="text"
 							name="comments"
 							placeholder="КОММЕНТАРИЙ"
-							className="placeholder-white border-yellow border-2 px-4 py-4 w-full text-xl"
+							className="placeholder-white border-yellow border-2 px-2 py-2 lg:px-4 lg:py-4 w-full lg:text-xl"
 						/>
-						<Button variant={"contactsButton"} className="py-4">
+						<Button
+							variant={"contactsButton"}
+							className="py-2 lg:py-4"
+						>
 							ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
 						</Button>
 					</form>

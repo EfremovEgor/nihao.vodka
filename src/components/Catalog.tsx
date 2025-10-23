@@ -268,7 +268,9 @@ const Catalog = () => {
 											currentItem
 										].coctail.ingredients.map((i) => (
 											<li className="flex flex-row gap-2 text-xl font-extralight items-center">
-												<GlassSVG className="h-5" />{" "}
+												<div className="h-5 w-5">
+													<GlassSVG className="h-5 w-5" />
+												</div>
 												<p>{i}</p>
 											</li>
 										))}
@@ -283,7 +285,9 @@ const Catalog = () => {
 									{items[currentItem].coctail.how_to_make.map(
 										(i) => (
 											<li className="flex flex-row gap-2 text-xl font-extralight items-center">
-												<GlassSVG className="h-5 w-5" />{" "}
+												<div className="h-5 w-5">
+													<GlassSVG className="h-5 w-5" />
+												</div>
 												<p>{i}</p>
 											</li>
 										)

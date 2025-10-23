@@ -31,6 +31,14 @@ export default function Header() {
 						<a href="#whereToBuy">Где купить</a>
 					</li>
 				</ul>
+				<div className="flex flex-row lg:hidden">
+					<Button
+						onClick={showContactUsForm}
+						variant={"contactsButton"}
+					>
+						Cвязаться
+					</Button>
+				</div>
 			</nav>
 		</header>
 	);

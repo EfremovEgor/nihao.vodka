@@ -43,7 +43,7 @@ const Footer = () => {
 					<p>info@concept-spirits.ru</p>
 					<p>+ 7 495 795 55 02</p>
 				</div>
-				<div className="col-span-2 mt-4">
+				<div className="col-span-2 mt-4 lg:hidden">
 					<p>ООО "Концепт", г. Москва, ул. Ленинская Слобода 19с1</p>
 					<p>info@concept-spirits.ru</p>
 					<p>+ 7 495 795 55 02</p>
