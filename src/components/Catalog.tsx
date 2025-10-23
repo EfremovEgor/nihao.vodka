@@ -140,10 +140,54 @@ const Catalog = () => {
 						</svg>
 					</button>
 				</div>
+				<div className="flex flex-row justify-between my-[25px]">
+					<div className="block lg:hidden">
+						<button
+							onClick={prevItem}
+							className="cursor-pointer bg-white/20 hover:bg-white/30 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all backdrop-blur-sm"
+							aria-label="Предыдущий продукт"
+						>
+							<svg
+								className="w-6 h-6"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth={2}
+									d="M15 19l-7-7 7-7"
+								/>
+							</svg>
+						</button>
+					</div>
 
+					<div className="block lg:hidden">
+						<button
+							onClick={nextItem}
+							className="cursor-pointer bg-white/20 hover:bg-white/30 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all backdrop-blur-sm"
+							aria-label="Следующий продукт"
+						>
+							<svg
+								className="w-6 h-6"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth={2}
+									d="M9 5l7 7-7 7"
+								/>
+							</svg>
+						</button>
+					</div>
+				</div>
 				<div
 					ref={sliderRef}
-					className="min-h-dvh w-full grid grid-cols-2 select-none"
+					className="min-h-dvh w-full grid grid-cols-2 select-none  lg:mt-[200px] "
 					onTouchStart={handleTouchStart}
 					onTouchMove={handleTouchMove}
 					onTouchEnd={handleTouchEnd}
@@ -158,7 +202,7 @@ const Catalog = () => {
 					}}
 				>
 					<div className="text-white">
-						<div className="text-4xl lg:text-7xl uppercas mt-[200px]">
+						<div className="text-4xl lg:text-7xl uppercas">
 							<h1 className="text-[var(--current-color)] transition-colors">
 								NIHAO
 							</h1>
