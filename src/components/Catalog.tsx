@@ -300,7 +300,7 @@ const Catalog = () => {
 								<div className="relative h-fit mx-auto w-fit mt-[300px] lg:mt-[100px]">
 									<img
 										src={items[item].image}
-										className="z-[2] h-fit w-[70px] lg:w-auto"
+										className="z-[2] h-auto w-[70px] lg:w-[157px]"
 										draggable="false"
 										alt={items[item].name}
 									/>

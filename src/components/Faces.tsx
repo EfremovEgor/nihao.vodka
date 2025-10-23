@@ -3,7 +3,10 @@ const Faces = () => {
 		<div>
 			<div className="fixed h-screen w-full bg-black -z-23 flex flex-col justify-center items-center">
 				<div className="absolute w-full h-full diamond-gradient-white -z-2"></div>
-				<img className="mx-auto -z-1" src="/images/items/classic.png" />
+				<img
+					className="mx-auto -z-1 w-[157px] h-auto"
+					src="/images/items/classic.png"
+				/>
 			</div>
 			<div className="hidden lg:flex min-h-dvh flex-row justify-between items-center bg-black">
 				<div className="flex flex-row items-center">
