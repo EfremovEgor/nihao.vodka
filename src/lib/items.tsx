@@ -33,7 +33,7 @@ export const items: {
 		mainIngredient: (
 			<div className="w-fit absolute z-2 -bottom-12 lg:bottom-0 -left-14 lg:-left-32">
 				<img
-					className="h-[100px] lg:h-[200px] w-fit mx-auto"
+					className="h-[100px] lg:h-[200px] w-auto mx-auto"
 					src="/images/items/ingredients/wheat.png"
 				/>
 				<h2 className="uppercase text-white font-extralight text-sm lg:text-base">
@@ -79,7 +79,7 @@ export const items: {
 		mainIngredient: (
 			<div className="w-fit absolute z-2 -bottom-12 lg:bottom-0 -left-14 lg:-left-32">
 				<img
-					className="h-[60px] lg:h-[120px] w-fit mx-auto"
+					className="h-[60px] lg:h-[120px] w-auto mx-auto"
 					src="/images/items/ingredients/rice.png"
 				/>
 				<h2 className="uppercase text-white font-extralight text-sm lg:text-base text-center">
@@ -122,7 +122,7 @@ export const items: {
 		mainIngredient: (
 			<div className="w-fit absolute z-2 -bottom-12 lg:bottom-0 -left-14 lg:-left-32">
 				<img
-					className="h-[60px] lg:h-[140px] w-fit mx-auto"
+					className="h-[60px] lg:h-[140px] w-auto mx-auto"
 					src="/images/items/ingredients/tangerine.png"
 				/>
 				<h2 className="uppercase text-white font-extralight text-sm lg:text-base text-center">
@@ -174,7 +174,7 @@ export const items: {
 		mainIngredient: (
 			<div className="w-fit absolute z-2 -bottom-12 lg:bottom-0 -left-14 lg:-left-32">
 				<img
-					className="h-[70px] lg:h-[140px] w-fit mx-auto"
+					className="h-[70px] lg:h-[140px] w-auto mx-auto"
 					src="/images/items/ingredients/plum.png"
 				/>
 				<h2 className="uppercase text-white font-extralight text-sm lg:text-base text-center">
@@ -204,8 +204,8 @@ export const items: {
 	},
 
 	lotos: {
-		name: "Lotos",
-		description: `Водка особая Nihao Lotos создана  для ценителей  изысканных напитков.  Лотосы — пищевые и  лекарственные растения, цветок лотоса необычайно  красив, нежен и романтичен. В Египте, Индии и Китае  лотос — сакральный символ.`,
+		name: "Lotus",
+		description: `Водка особая Nihao Lotus создана  для ценителей  изысканных напитков.  Лотосы — пищевые и  лекарственные растения, цветок лотоса необычайно  красив, нежен и романтичен. В Египте, Индии и Китае  лотос — сакральный символ.`,
 		volume: "0,5 / 0,7",
 		strength: 38,
 		darkText: true,
@@ -213,7 +213,7 @@ export const items: {
 		mainIngredient: (
 			<div className="w-fit absolute z-2 -bottom-12 lg:bottom-0 -left-14 lg:-left-32">
 				<img
-					className="h-[70px] lg:h-[140px] w-fit mx-auto"
+					className="h-[70px] lg:h-[140px] w-auto mx-auto"
 					src="/images/items/ingredients/lotos.png"
 				/>
 				<h2 className="uppercase text-white font-extralight text-sm lg:text-base text-center">

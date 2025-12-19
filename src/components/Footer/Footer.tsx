@@ -33,7 +33,7 @@ const Footer = () => {
 					</ul>
 				</div>
 				<NihaoSVG className="fill-white h-[33px] lg:justify-self-center" />
-				<div className="lg:justify-self-end hidden lg:block">
+				<div className="lg:justify-self-end hidden lg:block text-right">
 					<p>
 						ООО "Концепт"
 						<br />

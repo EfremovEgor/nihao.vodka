@@ -2,9 +2,10 @@ import NihaoSVG from "./svg/NihaoSVG";
 
 const AboutBrand = () => {
 	return (
+		// mt-[250px]
 		<div
 			id="aboutBrand"
-			className="py-16 mt-[250px] min-h-dvh bg-black px-5 mx-auto flex flex-col items-center justify-center"
+			className="py-16 min-h-dvh bg-black px-5 mx-auto flex flex-col items-center justify-center"
 		>
 			<div className="max-w-[970px] space-y-6">
 				<NihaoSVG className="fill-red  w-full" />

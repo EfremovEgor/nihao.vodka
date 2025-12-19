@@ -8,6 +8,7 @@ import Catalog from "@/components/Catalog";
 import PromoVideo from "@/components/PromoVideo";
 import ContactUsForm from "@/components/modals/ContactUsForm";
 import { useData } from "@/hooks/useDataContext";
+import CatalogCarousel from "@/components/Catalog copy";
 
 export const Route = createFileRoute("/")({
 	component: App,
@@ -19,12 +20,19 @@ function App() {
 
 	return (
 		<div>
+			<div className="fixed h-screen w-full bg-black -z-23 flex flex-col justify-center items-center">
+				<div className="absolute w-full h-full diamond-gradient-white -z-2"></div>
+				<img
+					className="mx-auto -z-1 w-[157px] h-auto"
+					src="/images/items/classic.png"
+				/>
+			</div>
 			<AgeAlert />
-			<Faces />
+			{/* <Faces /> */}
+			<PromoVideo />
 			<AboutBrand />
 			<Brands />
-			<PromoVideo />
-			<Catalog />
+			<CatalogCarousel />
 			<Shops />
 			<ContactUsForm
 				onClose={hideContactUsForm}

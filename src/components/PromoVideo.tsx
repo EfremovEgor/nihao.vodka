@@ -1,10 +1,13 @@
 import { useRef, useState } from "react";
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 
 const PromoVideo = () => {
-	const [playing, setPlaying] = useState(false);
-	const [playedBefore, setPlayedBefore] = useState(false);
+	const [playing, setPlaying] = useState(true);
+	const [playedBefore, setPlayedBefore] = useState(true);
 	const videoRef = useRef<HTMLVideoElement>(null!);
+	const handleVideoPause = () => {
+		videoRef.current.play();
+	};
 	const toggleVideoPlayback = () => {
 		if (playing) videoRef.current.pause();
 		else videoRef.current.play();
@@ -24,22 +27,29 @@ const PromoVideo = () => {
 					className={`w-full object-cover h-dvh ${playing && "hidden"}`}
 				/>
 			)}
-			<button
-				className="hidden lg:block absolute top-1/2 left-1/2 -translate-1/2 text-white"
-				onClick={toggleVideoPlayback}
+			{/* <button
+				className="hidden lg:block absolute top-1/2 left-1/2 -translate-1/2 text-red"
+				onClick={(e) => {
+					e.stopPropagation();
+					toggleVideoPlayback;
+				}}
 			>
 				{playing ? (
 					<Icon className="size-16" icon="solar:pause-bold" />
 				) : (
 					<Icon className="size-16" icon="solar:play-bold" />
 				)}
-			</button>
+			</button> */}
 			<video
-				onPause={() => setPlaying(false)}
-				onPlay={() => setPlaying(true)}
-				className={`w-full h-dvh object-cover ${!playedBefore ? "hidden" : "lg:block"} `}
+				onPause={handleVideoPause}
+				// onPlay={() => setPlaying(true)}
+				className={`w-full  object-cover ${!playedBefore ? "hidden" : "lg:block"} pointer-events-none`}
 				ref={videoRef}
-				controls
+				muted
+				playsInline
+				loop
+				autoPlay
+				typeof="video/mp4"
 				src="/videos/promo.mp4"
 			></video>
 		</div>
