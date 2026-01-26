@@ -10,7 +10,7 @@ const buttonVariants = cva(
 				contactsButton:
 					"px-3 py-1 border-2 text-white border-white rounded-[10px] hover:text-red hover:bg-white transition-all font-semibold active:font-bold",
 				mainButton:
-					"px-5 bg-red py-3 text-white rounded-[5px] border-transparent border-2 hover:font-bold transition-all font-semibold active:font-bold active:border-white",
+					"px-5 bg-red py-3 text-white rounded-[5px] border-transparent border-2 hover:font-bold transition-[font-size] font-semibold active:font-bold active:border-white",
 				secondaryButton:
 					"px-3 py-1 border-2 text-yellow border-yellow rounded-[5px] hover:border-white transition-all active:border-yellow",
 				ageConfirmationButton:

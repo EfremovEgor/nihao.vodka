@@ -55,7 +55,7 @@ const CatalogCarousel = () => {
 									className="text-white"
 								>
 									<div className="text-4xl lg:text-7xl uppercase">
-										<h1 className="text-[var(--current-color)] transition-colors">
+										<h1 className="text-[var(--current-color)] ">
 											NIHAO
 										</h1>
 										<h1 className="uppercase">
@@ -107,9 +107,7 @@ const CatalogCarousel = () => {
 										src={items[currentItem].image}
 										className="z-[2] h-auto w-[70px] lg:w-[157px]"
 										transition={{
-											type: "spring",
-											stiffness: 50,
-											damping: 25,
+											duration: 1,
 										}}
 										draggable="false"
 										alt={items[currentItem].name}
@@ -123,7 +121,7 @@ const CatalogCarousel = () => {
 											animate={{
 												opacity: 1,
 											}}
-											transition={{ duration: 0.5 }}
+											transition={{ duration: 2 }}
 										>
 											{items[currentItem].awarded && (
 												<img
@@ -141,36 +139,38 @@ const CatalogCarousel = () => {
 								</div>
 
 								<div className="flex flex-col justify-around ml-4">
-									<div>
-										<motion.img
-											layout
-											key={`thumb-${neighbours[0]}`}
-											layoutId={neighbours[0] as string}
-											src={items[neighbours[0]].image}
-											className="z-[2] h-auto w-[40px] lg:w-[60px] cursor-pointer"
-											style={{ filter: "blur(4px)" }}
-											onClick={() =>
-												setCurrentItem(neighbours[0])
-											}
-											draggable="false"
-											alt={items[neighbours[0]].name}
-										/>
-									</div>
-									<div>
-										<motion.img
-											layout
-											key={`thumb-${neighbours[1]}`}
-											layoutId={neighbours[1] as string}
-											src={items[neighbours[1]].image}
-											className="z-[2] h-auto w-[40px] lg:w-[60px] cursor-pointer"
-											style={{ filter: "blur(4px)" }}
-											onClick={() =>
-												setCurrentItem(neighbours[1])
-											}
-											draggable="false"
-											alt={items[neighbours[1]].name}
-										/>
-									</div>
+									<AnimatePresence mode="popLayout">
+										{neighbours.map((itemKey, _) => (
+											<motion.div
+												key={`container-${itemKey}`}
+												initial={{
+													opacity: 0,
+												}}
+												animate={{
+													opacity: 1,
+												}}
+												exit={{
+													opacity: 0,
+												}}
+												className="p-1"
+											>
+												<motion.img
+													layout
+													layoutId={itemKey as string}
+													src={items[itemKey].image}
+													className="z-[2] h-auto w-[40px] lg:w-[60px] cursor-pointer"
+													style={{
+														filter: "blur(4px)",
+													}}
+													onClick={() =>
+														setCurrentItem(itemKey)
+													}
+													draggable="false"
+													alt={items[itemKey].name}
+												/>
+											</motion.div>
+										))}
+									</AnimatePresence>
 								</div>
 							</div>
 						</div>

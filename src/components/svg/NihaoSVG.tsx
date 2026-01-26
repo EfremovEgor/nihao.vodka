@@ -1,6 +1,13 @@
-const NihaoSVG = ({ className }: { className?: string }) => {
+const NihaoSVG = ({
+	className,
+	onClick = () => {},
+}: {
+	className?: string;
+	onClick?: () => void;
+}) => {
 	return (
 		<svg
+			onClick={onClick}
 			className={className}
 			viewBox="0 0 153 30"
 			xmlns="http://www.w3.org/2000/svg"

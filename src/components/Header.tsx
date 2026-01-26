@@ -4,10 +4,18 @@ import NihaoSVG from "./svg/NihaoSVG";
 
 export default function Header() {
 	const { showContactUsForm } = useData();
-
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
 	return (
 		<header className="sticky top-0 h-[60px] bg-red px-5 flex flex-row justify-between items-center z-50">
-			<NihaoSVG className="fill-white h-[33px]" />
+			<NihaoSVG
+				onClick={scrollToTop}
+				className="fill-white h-[33px] cursor-pointer"
+			/>
 			<nav>
 				<ul className="hidden lg:flex flex-row gap-5 text-white text-[20px] items-center">
 					<li>
